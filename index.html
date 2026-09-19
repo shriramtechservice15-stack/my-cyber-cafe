@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Service Hub | Cyber Cafe & Online Services</title>
+    <!-- Google Fonts for Modern Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset & Basic Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        header .badge {
+            background-color: #ffc107;
+            color: #000;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(13, 110, 253, 0.85), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1eb954;
+            transform: translateY(-2px);
+        }
+
+        /* Services Section */
+        .container {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #0d6efd;
+            position: relative;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #0d6efd;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .service-card ul {
+            list-style: none;
+        }
+
+        .service-card ul li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-card ul li::before {
+            content: "✓";
+            color: #25d366;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Form & Contact Section */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .form-box, .contact-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        .btn-submit {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .btn-submit:hover {
+            background-color: #0b5ed7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            header { flex-direction: column; gap: 10px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Digital Service Hub</div>
+        <div class="badge">10+ Saal Ka Bharosa</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Aapka Apna Digital & Online Service Center</h1>
+        <p>Sarkari Form, Aadhaar Cash Withdrawal, Money Transfer, PAN Card, aur Sabhi Cyber Cafe Services Ek Hi Chhat Ke Neeche.</p>
+        <!-- APNA WHATSAPP NUMBER YAHAN REPLACE KAREIN -->
+        <a href="https://wa.me/919960828127?text=Hello,%20mujhe%20online%20service%20ke%20bare%20mein%20puchna%20hai." class="btn-whatsapp" target="_blank">
+            💬 WhatsApp Par Inquiry Karein
+        </a>
+    </section>
+
+    <!-- Services Section -->
+    <div class="container">
+        <h2 class="section-title">Hamari Services</h2>
+        <div class="services-grid">
+            
+            <div class="service-card">
+                <h3>📋 Sarkari Form & Exams</h3>
+                <ul>
+                    <li>SSC, Railway, Police Recruitment</li>
+                    <li>School/College Admission Forms</li>
+                    <li>Scholarship Forms</li>
+                    <li>Admit Card & Result Download</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>🏦 Banking & AEPS Services</h3>
+                <ul>
+                    <li>Aadhaar Cash Withdrawal</li>
+                    <li>Instant Money Transfer (DMT)</li>
+                    <li>Bank Account Balance Check</li>
+                    <li>Mini Statement Printing</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>💳 Documents & Cards</h3>
+                <ul>
+                    <li>Naya PAN Card & Correction</li>
+                    <li>Passport Application</li>
+                    <li>Ayushman Bharat Card</li>
+                    <li>Voter ID & Ration Card Services</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>🖨️ Printing & Scanning</h3>
+                <ul>
+                    <li>High-Speed Color & B/W Print</li>
+                    <li>Document Scanning & PDF Creation</li>
+                    <li>Lamination & Spiral Binding</li>
+                    <li>PVC Plastic Card Printing</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Inquiry & Contact Section -->
+        <div class="grid-2">
+            
+            <!-- Online Inquiry Form -->
+            <div class="form-box">
+                <h3 style="margin-bottom: 20px; color: #0d6efd;">Online Inquiry / Document Submission</h3>
+                <form action="https://formspree.io/f/your-form-id" method="POST">
+                    <div class="form-group">
+                        <label>Aapka Naam</label>
+                        <input type="text" name="name" placeholder="Apna naam likhein" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="tel" name="phone" placeholder="10-digit number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Konsi Service Chahiye?</label>
+                        <select name="service">
+                            <option>Sarkari Form Filling</option>
+                            <option>PAN Card / Passport</option>
+                            <option>AEPS / Cash Service</option>
+                            <option>Other Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message / Detail</label>
+                        <textarea name="message" rows="3" placeholder="Form ka naam ya detail likhein"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Inquiry Send Karein</button>
+                </form>
+            </div>
+
+            <!-- Shop Info & Contact Details -->
+            <div class="contact-box">
+                <h3 style="margin-bottom: 20px; color: #0d6efd;">Dukan Ka Pata & Timing</h3>
+                <p><strong>📍 Address:</strong> Main Bus Stand Road, [Amravati/Chandur Railway], Near Bus Stand.</p>
+                <br>
+                <p><strong>📞 Phone / WhatsApp:</strong> +91 9960828127</p>
+                <br>
+                <p><strong>⏰ Shop Timing:</strong></p>
+                <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                <p>Sunday: Half Day (9:00 AM - 2:00 PM)</p>
+                <br>
+                <p style="color: #28a745; font-weight: 600;">✨ Guaranteed Fast & Accurate Work!</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Digital Service Hub. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
