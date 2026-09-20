@@ -264,6 +264,58 @@
             .hero h1 { font-size: 1.8rem; }
             header { flex-direction: column; gap: 10px; text-align: center; }
         }
+        /* Live Job Notification Section */
+.job-updates-box {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+.job-card {
+    border-left: 4px solid #0d6efd;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease;
+}
+.job-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.job-title {
+    font-weight: bold;
+    color: #0d6efd;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+.job-meta {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+.badge-new {
+    background-color: #dc3545;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-left: 8px;
+}
+.btn-apply {
+    display: inline-block;
+    background-color: #198754;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.btn-apply:hover {
+    background-color: #157347;
+}
     </style>
 </head>
 <body>
@@ -336,43 +388,55 @@
             
             <!-- Online Inquiry Form -->
           <!-- Google Form Inquiry Section (Only Button) -->
-<div class="google-form-box">
-    <h3 style="color: #0d6efd; margin-bottom: 10px;">Shriram Computer - Online Service Inquiry</h3>
-    <p style="margin-bottom: 20px; color: #555;">Kisi bhi service ki inquiry ya online form bharwane ke liye niche button par click karein:</p>
-    
-    <!-- Direct Google Form Link Button -->
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSespr0vqWh_UJsrbBITbCwg4FrTkTZ2ixneJgX3Ct0wtVyF5A/viewform?usp=publish-editor" target="_blank" class="btn-google-form">
-        📋 Open Google Inquiry Form
-    </a>
-</div>
-</div>
-       
-        <div class="form-group">
-            <label for="message">Details / Query (Aapko kya kaam karwana hai):</label>
-            <textarea id="message" name="Message" rows="4" placeholder="Apna message ya form ka naam yahan likhein..." required></textarea>
+<!-- Live Job Notification Section -->
+<div class="job-updates-box">
+    <h3 style="color: #0d6efd; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;">
+        <span>🔥 Live Sarkari Bharti & Job Updates</span>
+        <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">Daily Update</span>
+    </h3>
+
+    <!-- Job Item 1 -->
+    <div class="job-card">
+        <div class="job-title">
+            SSC CGL Recruitment 2026 
+            <span class="badge-new">NEW</span>
         </div>
+        <div class="job-meta">
+            📅 Last Date: 30 Sept 2026 | 🎓 Eligibility: Graduate | 💼 Total Posts: Various
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSespr0vqWh_UJsrbBITbCwg4FrTkTZ2ixneJgX3Ct0wtVyF5A/viewform?usp=publish-editor" target="_blank" class="btn-apply">
+            📝 Shriram Computer Se Form Bharwayein
+        </a>
+    </div>
 
-        <button type="submit" class="btn-submit">Inquiry Send Karein</button>
+    <!-- Job Item 2 -->
+    <div class="job-card">
+        <div class="job-title">
+            Railway RPF Constable & SI Online Form
+            <span class="badge-new">NEW</span>
+        </div>
+        <div class="job-meta">
+            📅 Last Date: 15 Oct 2026 | 🎓 Eligibility: 10th / Graduate
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSespr0vqWh_UJsrbBITbCwg4FrTkTZ2ixneJgX3Ct0wtVyF5A/viewform?usp=publish-editor" target="_blank" class="btn-apply">
+            📝 Shriram Computer Se Form Bharwayein
+        </a>
+    </div>
 
-    </form>
+    <!-- Job Item 3 -->
+    <div class="job-card">
+        <div class="job-title">
+            Instant Aadhaar PAN Link & Correction Offer
+        </div>
+        <div class="job-meta">
+            ⚡ Quick Service: 2 Ghante Mein PAN Card Banti Hai
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSespr0vqWh_UJsrbBITbCwg4FrTkTZ2ixneJgX3Ct0wtVyF5A/viewform?usp=publish-editor" target="_blank" class="btn-apply">
+            📋 Google Form Se Inquiry Karein
+        </a>
+    </div>
+
 </div>
-                    <div class="form-group">
-                        <label>Konsi Service Chahiye?</label>
-                        <select name="service">
-                            <option>Sarkari Form Filling</option>
-                            <option>PAN Card / Passport</option>
-                            <option>AEPS / Cash Service</option>
-                            <option>Other Services</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Message / Detail</label>
-                        <textarea name="message" rows="3" placeholder="Form ka naam ya detail likhein"></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Inquiry Send Karein</button>
-                </form>
-            </div>
-
             <!-- Shop Info & Contact Details -->
             <div class="contact-box">
                 <h3 style="margin-bottom: 20px; color: #0d6efd;">Dukan Ka Pata & Timing</h3>
